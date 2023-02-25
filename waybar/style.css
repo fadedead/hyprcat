@@ -2,7 +2,7 @@
 @import "mocha.css";
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Hack Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+    font-family: Fira Code, Hack Nerd Font, Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
 
@@ -11,9 +11,9 @@ window#waybar {
     color: @mantle;
     transition-property: background-color;
     transition-duration: 0.5s;
-    border-radius: 16px;
+    border-radius: 12px;
     transition-duration: .5s;
-    margin: 16px 16px;
+    /*margin: 16px 16px;*/
 }
 
 window#waybar.hidden {
