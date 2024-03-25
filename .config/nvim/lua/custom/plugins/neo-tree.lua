@@ -19,13 +19,20 @@ return {
                 {
                     event = "file_opened",
                     handler = function(file_path)
-                        -- auto close
-                        -- vimc.cmd("Neotree close")
-                        -- OR
                         require("neo-tree.command").execute({ action = "close" })
                     end
                 },
             },
+            opts = {
+                filesystem = {
+                    filtered_items = {
+                        visible = true,
+                        show_hidden_count = true,
+                        hide_dotfiles = false,
+                        hide_gitignored = true
+                    }
+                }
+            }
         }
     end,
 }
