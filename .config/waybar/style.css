@@ -1,8 +1,13 @@
-
 @import "mocha.css";
+
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Fira Code, Hack Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+    font-family:
+        Fira Code,
+        Hack Nerd Font,
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
     font-size: 16px;
 }
 
@@ -12,27 +17,15 @@ window#waybar {
     transition-property: background-color;
     transition-duration: 0.5s;
     border-radius: 12px;
-    transition-duration: .5s;
-    /*margin: 16px 16px;*/
+    transition-duration: 0.5s;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-
-
 window#waybar.termite {
-    background-color: #3F3F3F;
+    background-color: #3f3f3f;
 }
 
 window#waybar.chromium {
@@ -41,27 +34,21 @@ window#waybar.chromium {
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    /*box-shadow: inset 0 -3px #ffffff;*/
 }
 
 #workspaces button {
-    /*background-color: @mantle;*/
     color: @text;
 }
 
-
 #workspaces button.focused {
-    background-color: #64727D;
+    background-color: #64727d;
     box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -70,7 +57,7 @@ button:hover {
 }
 
 #mode {
-    background-color: #64727D;
+    background-color: #64727d;
     border-bottom: 3px solid #ffffff;
 }
 
@@ -92,6 +79,7 @@ button:hover {
 #mpd {
     padding: 0 10px;
     color: #ffffff;
+    margin: 2px;
 }
 
 #window,
@@ -99,13 +87,11 @@ button:hover {
     margin: 0 4px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
     margin-left: 0;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
     margin-right: 0;
 }
 
@@ -121,7 +107,8 @@ button:hover {
     border-radius: 12px;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     color: @mantle;
     background-color: @red;
 }
@@ -160,7 +147,7 @@ label:focus {
 }
 
 #disk {
-    background-color: #964B00;
+    background-color: #964b00;
 }
 
 #backlight {
@@ -228,11 +215,11 @@ label:focus {
     background-color: #2980b9;
 }
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }
@@ -279,11 +266,11 @@ label:focus {
     min-width: 16px;
 }
 
-#keyboard-state > label {
+#keyboard-state>label {
     padding: 0 5px;
 }
 
-#keyboard-state > label.locked {
+#keyboard-state>label.locked {
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -292,13 +279,13 @@ label:focus {
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+    background-color: transparent;
 }
 
- tooltip {
-  background-color: @mantle;
+tooltip {
+    background-color: @mantle;
 }
 
 tooltip label {
-  color: @mauve;
+    color: @mauve;
 }

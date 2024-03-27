@@ -92,7 +92,6 @@ local servers = {
     emmet_ls = {},
     tailwindcss = {},
 
-
     lua_ls = {
         Lua = {
             workspace = { checkThirdParty = false },

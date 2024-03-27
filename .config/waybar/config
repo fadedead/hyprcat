@@ -11,7 +11,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/media"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "temperature", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["custom/media", "pulseaudio", "cpu", "memory", "temperature", "battery", "battery#bat2", "clock", "tray"],
 
     "hyprland/workspaces": {
     	"all-outputs": true,
