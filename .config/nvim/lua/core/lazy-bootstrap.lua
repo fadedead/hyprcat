@@ -21,6 +21,8 @@ require('lazy').setup({
     'tpope/vim-sleuth', -- Useful plugin to show you pending keybinds.
     {'folke/which-key.nvim', opts = {}},
 
+    'github/copilot.vim',
+
     -- "gc" to comment visual regions/lines
     {'numToStr/Comment.nvim', opts = {}}, {import = 'custom.plugins'}
 }, {})

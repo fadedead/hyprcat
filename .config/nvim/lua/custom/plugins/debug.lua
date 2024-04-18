@@ -1,10 +1,3 @@
--- debug.lua
---
--- Shows how to use the DAP plugin to debug your code.
---
--- Primarily focused on configuring the debugger for Go, but can
--- be extended to other languages as well. That's why it's called
--- kickstart.nvim and not kitchen-sink.nvim ;)
 return {
     -- NOTE: Yes, you can install new plugins here!
     'mfussenegger/nvim-dap',
@@ -15,7 +8,7 @@ return {
         'williamboman/mason.nvim', 'jay-babu/mason-nvim-dap.nvim',
         'nvim-neotest/nvim-nio',
         -- Add your own debuggers here
-        'leoluz/nvim-dap-go'
+        'leoluz/nvim-dap-go',
     },
     config = function()
         local dap = require 'dap'
@@ -34,9 +27,33 @@ return {
             -- online, please don't ask me how to install them :)
             ensure_installed = {
                 -- Update this to ensure that you have the debuggers for the langs you want
-                'delve'
+                'delve',
+                'js-debug-adapter',
             }
         }
+
+        -- JS/TS DAP config
+        dap.adapters["pwa-node"] = {
+            type = "server",
+            host = "127.0.0.1",
+            port = 8123,
+            executable = {
+                command = "js-debug-adapter",
+            }
+        }
+
+        for _, language in ipairs { "typescript", "javascript" } do
+            dap.configurations[language] = {
+                {
+                    type = "pwa-node",
+                    request = "launch",
+                    name = "Launch file",
+                    program = "${file}",
+                    cwd = "${workspaceFolder}",
+                    runtimeExecutable = "node",
+                },
+            }
+        end
 
         -- Basic debugging keymaps, feel free to change to your liking!
         vim.keymap.set('n', '<F5>', dap.continue,

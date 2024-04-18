@@ -41,8 +41,14 @@ end, { desc = "Trigger linting for current file" })
 -- Harpoon
 local harpoon = require("harpoon")
 harpoon:setup()
-vim.keymap.set("n", "<leader>la", function() harpoon:list():append() end, { desc = "Add File To Harpoon List" })
+vim.keymap.set("n", "<leader>la", function() harpoon:list():add() end, { desc = "Add File To Harpoon List" })
 vim.keymap.set("n", "<leader>lv", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end,
     { desc = "Show Harpoon List" })
 vim.keymap.set("n", "<C-h>", function() harpoon:list():next({ ui_nav_wrap = true }) end)
 vim.keymap.set("n", "<C-l>", function() harpoon:list():prev({ ui_nav_wrap = true }) end)
+vim.keymap.set("n", "<C-1>", function() harpoon:list():select(1) end)
+vim.keymap.set("n", "<C-2>", function() harpoon:list():select(2) end)
+vim.keymap.set("n", "<C-3>", function() harpoon:list():select(3) end)
+vim.keymap.set("n", "<C-4>", function() harpoon:list():select(4) end)
+
+
