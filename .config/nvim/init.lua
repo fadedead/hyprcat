@@ -8,8 +8,6 @@ require 'core.vim-settings'
 
 require 'core.keymaps'
 
-require 'core.vim-settings'
-
 require 'core.telescope-setup'
 
 require 'core.treesitter-setup'
