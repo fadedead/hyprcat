@@ -28,6 +28,10 @@ config.keys = {
 	{ key = 'j',     mods = 'ALT|SHIFT', action = wezterm.action.SplitPane { direction = 'Down', size = { Percent = 50 }, } },
 	{ key = 'k',     mods = 'ALT|SHIFT', action = wezterm.action.SplitPane { direction = 'Up', size = { Percent = 50 }, } },
 	{ key = 'l',     mods = 'ALT|SHIFT', action = wezterm.action.SplitPane { direction = 'Right', size = { Percent = 50 }, } },
+	{ key = 'h',	 mods = 'ALT', action = act.ActivatePaneDirection 'Left', },
+	{ key = 'j',	 mods = 'ALT', action = act.ActivatePaneDirection 'Down', },
+	{ key = 'k',	 mods = 'ALT', action = act.ActivatePaneDirection 'Up', },
+	{ key = 'l',	 mods = 'ALT', action = act.ActivatePaneDirection 'Right', },
 
 	-- Tabs
 	{ key = 'q',     mods = 'ALT',       action = act.CloseCurrentTab({ confirm = true }) },
