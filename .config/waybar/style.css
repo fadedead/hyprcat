@@ -12,11 +12,11 @@
 }
 
 window#waybar {
-    background-color: @crust;
-    color: @mantle;
+    background-color: black;
+    color: white;
     transition-property: background-color;
     transition-duration: 0.5s;
-    border-radius: 12px;
+    border-radius: 0px;
     transition-duration: 0.5s;
 }
 
@@ -25,12 +25,13 @@ window#waybar.hidden {
 }
 
 window#waybar.termite {
-    background-color: #3f3f3f;
+    background-color: black;
+    color: white;
 }
 
 window#waybar.chromium {
-    background-color: #000000;
-    border: none;
+    background-color: black;
+    color: white;
 }
 
 button {
@@ -44,7 +45,8 @@ button:hover {
 }
 
 #workspaces button {
-    color: @text;
+    background-color: black;
+    color: white;
 }
 
 #workspaces button.focused {
@@ -53,11 +55,13 @@ button:hover {
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: black;
+    color: white;
 }
 
 #mode {
-    background-color: #64727d;
+    background-color: black;
+    color: white;
     border-bottom: 3px solid #ffffff;
 }
 
@@ -96,33 +100,33 @@ button:hover {
 }
 
 #clock {
-    background-color: @mauve;
-    color: @mantle;
+    background-color: black;
+    color: white;
     border-radius: 12px;
 }
 
 #battery {
-    background-color: @red;
-    color: @mantle;
+    background-color: black;
+    color: white;
     border-radius: 12px;
 }
 
 #battery.charging,
 #battery.plugged {
-    color: @mantle;
-    background-color: @red;
+    background-color: black;
+    color: white;
 }
 
 @keyframes blink {
     to {
-        background-color: @red;
-        color: @mantle;
+        background-color: black;
+        color: white;
     }
 }
 
 #battery.critical:not(.charging) {
-    background-color: @red;
-    color: @mantle;
+    background-color: black;
+    color: white;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -131,18 +135,19 @@ button:hover {
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: black;
+    color: white;
 }
 
 #cpu {
-    background-color: @yellow;
-    color: @mantle;
+    background-color: black;
+    color: white;
     border-radius: 12px;
 }
 
 #memory {
-    background-color: @peach;
-    color: @mantle;
+    background-color: black;
+    color: white;
     border-radius: 12px;
 }
 
@@ -163,32 +168,32 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: @green;
-    color: @mantle;
+    background-color: black;
+    color: white;
     border-radius: 12px;
 }
 
 #pulseaudio.muted {
-    background-color: @green;
-    color: @mantle;
+    background-color: black;
+    color: white;
     border-radius: 12px;
 }
 
 #wireplumber {
-    background-color: @green;
-    color: @mantle;
+    background-color: black;
+    color: white;
     border-radius: 12px;
 }
 
 #wireplumber.muted {
-    background-color: @green;
-    color: @mantle;
+    background-color: black;
+    color: white;
     border-radius: 12px;
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: black;
+    color: white;
     min-width: 100px;
 }
 
@@ -201,14 +206,14 @@ label:focus {
 }
 
 #temperature {
-    background-color: @maroon;
-    color: @mantle;
+    background-color: black;
+    color: white;
     border-radius: 12px;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
-    color: @mantle;
+    background-color: black;
+    color: white;
 }
 
 #tray {
@@ -283,9 +288,11 @@ label:focus {
 }
 
 tooltip {
-    background-color: @mantle;
+    background-color: black;
+    color: white;
 }
 
 tooltip label {
-    color: @mauve;
+    background-color: black;
+    color: white;
 }

@@ -5,7 +5,12 @@ local act = wezterm.action
 
 config.audible_bell = "Disabled"
 
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "duskfox"
+config.color_schemes = {
+['duskfox'] = {
+background = 'black',
+}
+}
 
 config.font = wezterm.font "Fira Code"
 config.font_size = 14.0
