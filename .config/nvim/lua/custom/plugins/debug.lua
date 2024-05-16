@@ -9,6 +9,7 @@ return {
         'nvim-neotest/nvim-nio',
         -- Add your own debuggers here
         'leoluz/nvim-dap-go',
+        "mfussenegger/nvim-dap-python",
     },
     config = function()
         local dap = require 'dap'
@@ -28,32 +29,12 @@ return {
             ensure_installed = {
                 -- Update this to ensure that you have the debuggers for the langs you want
                 'delve',
-                'js-debug-adapter',
             }
         }
 
-        -- JS/TS DAP config
-        dap.adapters["pwa-node"] = {
-            type = "server",
-            host = "127.0.0.1",
-            port = 8123,
-            executable = {
-                command = "js-debug-adapter",
-            }
-        }
-
-        for _, language in ipairs { "typescript", "javascript" } do
-            dap.configurations[language] = {
-                {
-                    type = "pwa-node",
-                    request = "launch",
-                    name = "Launch file",
-                    program = "${file}",
-                    cwd = "${workspaceFolder}",
-                    runtimeExecutable = "node",
-                },
-            }
-        end
+        -- Python
+        local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+        require("dap-python").setup(path)
 
         -- Basic debugging keymaps, feel free to change to your liking!
         vim.keymap.set('n', '<F5>', dap.continue,

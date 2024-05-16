@@ -69,10 +69,14 @@ require('which-key').register({
     ['<leader>h'] = { 'Git [H]unk' }
 }, { mode = 'v' })
 
+-- Java
+require('java').setup()
+
 -- mason-lspconfig requires that these setup functions are called in this order
 -- before setting up the servers.
 require('mason').setup()
 require('mason-lspconfig').setup()
+
 
 local mason_tool_installer = require('mason-tool-installer')
 
@@ -104,14 +108,22 @@ local servers = {
 
 local tools = {
     prettier = {},
-    isort = {},
-    black = {},
-    pylint = {},
+
+    -- JS 
     eslint_d = {},
+
+    -- Python
+    debugpy = {},
+    black = {},
+    isort = {},
+    pylint = {},
 }
 
 -- Setup neovim lua configuration
 require('neodev').setup()
+
+-- Java
+require('lspconfig').jdtls.setup({})
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
