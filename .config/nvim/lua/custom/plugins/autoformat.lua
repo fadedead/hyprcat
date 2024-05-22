@@ -21,7 +21,7 @@ return {
             if not _augroups[client.id] then
                 local group_name = 'kickstart-lsp-format-' .. client.name
                 local id = vim.api.nvim_create_augroup(group_name,
-                                                       {clear = true})
+                    { clear = true })
                 _augroups[client.id] = id
             end
 
@@ -33,7 +33,7 @@ return {
         -- See `:help LspAttach` for more information about this autocmd event.
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('kickstart-lsp-attach-format',
-                                                {clear = true}),
+                { clear = true }),
             -- This is where we attach the autoformatting for reasonable clients
             callback = function(args)
                 local client_id = args.data.client_id

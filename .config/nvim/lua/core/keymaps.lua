@@ -50,5 +50,3 @@ vim.keymap.set("n", "<C-1>", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<C-2>", function() harpoon:list():select(2) end)
 vim.keymap.set("n", "<C-3>", function() harpoon:list():select(3) end)
 vim.keymap.set("n", "<C-4>", function() harpoon:list():select(4) end)
-
-
