@@ -23,7 +23,7 @@ local function get_bundles()
     local java_debug = mason_registry.get_package("java-debug-adapter")
     -- Obtain the full path to the directory where Mason has downloaded the Java Debug Adapter binaries
     local java_debug_path = java_debug:get_install_path()
-
+    print(java_debug_path)
     local bundles = {
         vim.fn.glob(java_debug_path .. "/extension/server/com.microsoft.java.debug.plugin-*.jar", 1)
     }
